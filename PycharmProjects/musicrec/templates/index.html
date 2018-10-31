@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <h1>Music Recommendation</h1>
+    <h3>Search for Tags</h3>
+    <input id = "tagInput" type="text">
+    <button hidden id = "add" onclick = "addTag()">Add tag</button>
+    <ul id = "tagList"></ul>
+    <button onclick = "search()" id = "search">Search</button>
+</body>
+<script type = "text/javascript">
+    $("#tagInput").keyup(event, function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        $("#add").click();
+      }
+    });
+    function addTag()
+    {
+        var name = $('#tagInput').val().replace(/\W/g, '').toLowerCase();
+        $('#tagInput').val('');
+        if(name == ""||$('#'+name+'Tag').length > 0)
+        {
+            return;
+        }
+        $('#tagList').append('<li id = "'+name+'Tag">'+name+'<a style = "margin-left: 10px" href = "#" onclick = "deleteTag('+'\''+name+'\''+')">x</a></li>');
+    }
+    function deleteTag(name)
+    {
+        $('#'+name+'Tag').remove();
+    }
+    function search()
+    {
+        var tags = "";
+        $('li').each(function(){
+            tags += "+" + $(this).text();
+        });
+        window.location.href = "search/" + tags.substring(1);
+    }
+</script>
+</html>
