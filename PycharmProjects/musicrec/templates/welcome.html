@@ -3,18 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <style>
+    body {
+    background-image: url("http://7minutes.ru/wp-content/uploads/2016/12/Sony-Music-Vinyl-l.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1 {
+    color: LightYellow;
+}
+h2 {
+    color: LightGoldenRodYellow;
+}
+h3 {
+    color: LightGoldenRodYellow;
+}
+h4 {
+    color: LightYellow;
+}
+    </style>
 </head>
 <body>
-    <div>
-        Music Recommendation:
-        <a href="/index">Search</a>
-        <a href="/about">About</a>
-        <a href="/teamMember">Team</a>
+    <div id = "Music Recommendation:">
+        <font size="6"><b>Music Recommendation</b></font>
+        <a href="/index"><font size="4">Search</font></a>
+        <a href="/about"><font size="4">About</font></a>
+        <a href="/teamMember"><font size="4">Team</font></a>
     </div>
     <hr>
     {% block content %}
+    <center>
+        <br />
+        <br />
     <h1>Welcome to the Music Recommendation Website!</h1>
-    <h2>Go and find the most suitable music for you!</h2>
+        <br />
+        <br />
+        <br />
+    <h2>“Music has always been a matter of Energy to me, a question of Fuel.
+        Sentimental people call it Inspiration, but what they really mean is Fuel.
+        I have always needed Fuel. I am a serious consumer. On some nights I still
+        believe that a car with the gas needle on empty can run about fifty more
+        miles if you have the right music very loud on the radio.”</h2>
+    <h3>― Hunter S. Thompson</h3>
+        <br />
+    <h4><font size="5">Go and find the most suitable music for you!</font></h4>
+    </center>
     {% endblock %}
 </body>
 </html>
