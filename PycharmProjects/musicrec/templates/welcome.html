@@ -23,10 +23,36 @@ h3 {
 h4 {
     color: LightYellow;
 }
+div.gallery {
+    margin: 45px;
+    border: 1px solid #ccc;
+    float: right;
+    width: 350px;
+    color: LightGoldenRodYellow;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: white
+}
+b {
+    color: LightYellow;
+}
     </style>
 </head>
 <body>
-    <div id = "Music Recommendation:">
+    <div>
         <font size="6"><b>Music Recommendation</b></font>
         <a href="/index"><font size="4">Search</font></a>
         <a href="/about"><font size="4">About</font></a>
@@ -49,7 +75,60 @@ h4 {
     <h3>― Hunter S. Thompson</h3>
         <br />
     <h4><font size="5">Go and find the most suitable music for you!</font></h4>
+        <a href="/index"><font size="6"><button>Search Here</button></font></A>
     </center>
     {% endblock %}
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    <div class="gallery">
+  <a target="_blank" href="https://www.beyonce.com/album/i-am-sasha-fierce/songs/">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/96/I_Am..._Sasha_Fierce.png/220px-I_Am..._Sasha_Fierce.png" alt="Beyonce" width="500" height="300">
+  </a>
+  <div class="desc">I Am... Sasha Fierce</div>
+        1. If I were a boy<br /><br />
+        2. Halo<br /><br />
+        3. Disappear<br /><br />
+        4. Broken Hearted Girl<br /><br />
+        5. Ave Maria<br /><br />
+        6. Smash Into You<br /><br />
+        7. Satellites
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.maroon5.com/music/red-pill-blues-deluxe-2">
+    <img src="https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/4b/a6/e7/4ba6e74a-d4f7-7232-105a-e913e890886d/00602567753131.rgb.jpg/600x600bf.png" alt="Maroon 5" width="500" height="300">
+  </a>
+    <div class="desc">Reputation</div>
+    1.  ...Ready For It?<br /><br />
+    2.  End Game<br /><br />
+    3.  I Did Something Bad<br /><br />
+    4.  Don't Blame Me<br /><br />
+    5.  Delicate<br /><br />
+    6.  Look What You Made Me Do<br /><br />
+    7.  So It Goes...
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.taylorswift.com/releases#/release/15193">
+    <img src="https://scroar.net/wp-content/uploads/2017/11/Taylor-Swift-reputation-ART-2017-billboard-1548-800x800.jpg" alt="Tylor Swift" width="500" height="300">
+  </a>
+  <div class="desc">Red Pill Blues </div>
+    1. Best 4 U<br /><br />
+    2. Wait<br /><br />
+    3. Lips on you<br /><br />
+    4. Bet My Heart<br /><br />
+    5. Help me out<br /><br />
+    6. Who I Am (feat. LunchMoney Lewis)<br /><br />
+    7. Whiskey (feat. A$AP Rocky)
+</div>
+
+<center>
+<b>Wanna know more about these album? Try to click on those pictures.</b>
+</center>
+
 </body>
 </html>
