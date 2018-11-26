@@ -1,7 +1,7 @@
 from flask import Flask, render_template
+from flask import request
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def welcome():
@@ -15,9 +15,11 @@ def welcome2():
 def index():
     return render_template("index.html")
 
-@app.route('/search/<tags>')
-def search(tags):
-    return render_template("search.html", tags = tags.split('+'))
+@app.route('/foo', methods=['POST'])
+def foo():
+    names = request.form.get('names')
+    output1 = names
+    return render_template('search.html', output = output1)
 
 @app.route('/about')
 def about():
@@ -28,4 +30,4 @@ def team():
     return render_template("teamMember.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='10.148.45.124')
