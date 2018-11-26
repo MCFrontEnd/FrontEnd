@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,40 +30,14 @@ b {
     <center>
         <h1><font size="7">Music Recommendation</font></h1>
         <h3><font size="5">Enter the name of your favorite song here:</font></h3>
-    <input id = "tagInput" type="text">
-    <button hidden id = "add" onclick = "addTag()">Add tag</button>
-    <ul id = "tagList"></ul>
-    <button onclick = "search()" id = "search">Search</button>
+     <form action="/foo" method="POST">
+     <input type="text" name="names"> <br><br>
+     <button type="submit">Search</button>
+     <input type="reset">
+     </form>
+
     </center>
 </body>
-<script type = "text/javascript">
-    $("#tagInput").keyup(event, function(event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-        $("#add").click();
-      }
-    });
-    function addTag()
-    {
-        var name = $('#tagInput').val().replace(/\W/g, '').toLowerCase();
-        $('#tagInput').val('');
-        if(name == ""||$('#'+name+'Tag').length > 0)
-        {
-            return;
-        }
-        $('#tagList').append('<li id = "'+name+'Tag">'+name+'<a style = "margin-left: 10px" href = "#" onclick = "deleteTag('+'\''+name+'\''+')">x</a></li>');
-    }
-    function deleteTag(name)
-    {
-        $('#'+name+'Tag').remove();
-    }
-    function search()
-    {
-        var tags = "";
-        $('li').each(function(){
-            tags += "+" + $(this).text();
-        });
-        window.location.href = "search/" + tags.substring(1);
-    }
-</script>
+
 </html>
+
