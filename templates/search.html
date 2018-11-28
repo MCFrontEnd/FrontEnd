@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendation Search</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'style.css')}}">
+    <style>
+    body {
+    background-image: url("https://research.fb.com/wp-content/uploads/2018/05/music-hero2.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+b {
+    color: Beige;
+}
+    </style>
+</head>
+<body>
+    <div class="title">
+        <font size="6"><b>Music Recommendation&nbsp;</b></font>
+        <a href="/welcome"><font size="4" color="beige">Welcome&nbsp;</font></a>
+        <a href="/index"><font size="4" color="beige">Search&nbsp;</font></a>
+        <a href="/about"><font size="4" color="beige">About&nbsp;</font></a>
+        <a href="/teamMember"><font size="4" color="beige">Team</font></a>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <center>
+        <h1><font size="7" color="beige">Music Recommendation</font></h1>
+        <h3><font size="5" color="beige">Here is the music recommended to you:</font></h3>
+        <h4><font size="5" color="beige">{{ output }}</h4>
+        <br /><br />
+        <a href="/index"><font size="6"><button>Start Another Search</button></font></A>
+    </center>
+</body>
+
+</html>
+

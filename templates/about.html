@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+    body {
+    background-image: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f0fdc18a215ec725f8ca61dc6fcbdf&auto=format&fit=crop&w=1950&q=80");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.column {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 400px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+p {
+    line-height: 1.6;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <font size="6"><b>Music Recommendation</b></font>
+        <a href="/welcome"><font size="4">Welcome</font></a>
+        <a href="/index"><font size="4">Search</font></a>
+        <a href="/about"><font size="4">About</font></a>
+        <a href="/teamMember"><font size="4">Team</font></a>
+    </div>
+
+    <div class="row">
+  <div class="column">
+      <br />
+      <br />
+      <br />
+    <h2>Who we are</h2>
+    <p><font size="4">&nbsp; &nbsp; According to Statista, 69% of the surveyed Americans
+        listen to music every day. (Music listening frequency in the United States
+        as of August 2017, by age) The new report released by Nielsen Music showed
+        that on average, Americans now spend more than 32 hours a week listening
+        to music, which is a significant growth, compared to the average of 26.6
+        hours in 2016.  While the market for music is growing rapidly, music is
+        easier to access than ever, thanks to streaming platforms like Spotify,
+        YouTube, etc. Music is played everywhere: in stores, restaurants, and people’s
+        cars and mobile devices. Therefore, it is not surprising that many music lovers
+        get tired of tracks easily and crave for new tracks that fit their taste.</font></p>
+      <br />
+      <p><font size="4">&nbsp; &nbsp; However, the current way applications such as Spotify or iTunes find music is based
+        mainly off of overlapping song interests between users, sentiment analysis, and audio model.
+        This way frequently leads to unhelpful recommendations due to over generalization. Therefore,
+        our Music Recommendation website is, thus, designed to find the most suitable music to you
+        based on the tags of the songs you enter. In this way, we hope to create the personalized playlist
+          only for you.</font></p>
+  </div>
+</div>
+
+</body>
+</html>
